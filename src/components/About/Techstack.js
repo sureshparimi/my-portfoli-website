@@ -14,7 +14,6 @@ import { Col, Row } from "react-bootstrap";
 //   SiFirebase,
 //   SiNextdotjs,
 // } from "react-icons/si";
-
 function Techstack() {
   return (
     
