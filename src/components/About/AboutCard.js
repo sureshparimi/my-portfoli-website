@@ -9,8 +9,8 @@ function AboutCard() {
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Suresh Parimi </span>
-            from <span className="purple"> Tallinn, Estonia.</span>
-            <br />I am an Automation Test Consultant & Software Test Engineer
+            from <span className="purple"> Amsterdam, The Netherlands</span>
+            <br />I am an Automation Test Consultant & Jira, Confluence Administrator
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
