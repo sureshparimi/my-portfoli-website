@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row, Table } from "react-bootstrap";
+import { Table } from "react-bootstrap";
 
 function Toolstack() {
   return (

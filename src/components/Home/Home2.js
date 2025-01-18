@@ -1,10 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import myImg from "../../Assets/avatar.svg";
-import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -14,60 +12,114 @@ function Home2() {
       <Container>
         <Row>
           <Col md={8} className="home-about-description">
-            <h1 style={{ fontSize: "2.6em" }}>
-              LET ME <span className="purple"> INTRODUCE </span> MYSELF
+            <h1 className="introduction-heading">
+              Let Me <span className="purple">Introduce</span> Myself
             </h1>
-            <p className="home-about-body">
-              With over 17 years of experience in Software Testing and Quality Assurance, 
-              I've mastered the art of delivering quality software.
-              <br />
-              <br />
-              My expertise spans across
-              <i>
-                <b className="purple"> Test Automation, Release Management, and Quality Engineering Leadership. </b>
-              </i>
-              <br />
-              <br />
-              I specialize in building and optimizing test automation frameworks using &nbsp;
-              <i>
-                <b className="purple">Python, Java, and JavaScript </b> with tools like {" "}
-                <b className="purple">
-                  Playwright, Cypress, Selenium, and Robot Framework.
-                </b>
-              </i>
-              <br />
-              <br />
-              My passion lies in implementing 
-              <i>
-                <b className="purple"> robust testing strategies </b> and fostering a {" "}
-                <b className="purple">
-                  shift-left testing culture
-                </b>
-              </i>
-              <br />
-              <br />
-              I bring extensive experience in &nbsp;
-              <b className="purple">Web, Mobile, and API Testing</b>, ensuring comprehensive 
-              quality across all aspects of software delivery.
-              <br />
-              <br />
-              <i>
-                <b className="purple">Want to know more about my professional journey? </b>
-                <a 
-                  href="https://www.linkedin.com/in/sparimi/"
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ color: "#c770f0", textDecoration: "none" }}
-                >
-                  Click here to connect on LinkedIn
-                </a>
-              </i>
-            </p>
+            <div className="home-about-body">
+              <div className="experience-highlight">
+                <p>
+                  With over <span className="purple">17 years</span> of experience in 
+                  Software Testing and Quality Assurance, I've cultivated expertise in 
+                  delivering exceptional software quality.
+                </p>
+              </div>
+
+              <div className="expertise-section">
+                <h3 className="section-subtitle">Core Expertise</h3>
+                <ul className="expertise-list">
+                  <li>
+                    <span className="purple">▹</span> Test Automation Architecture
+                  </li>
+                  <li>
+                    <span className="purple">▹</span> Release Management
+                  </li>
+                  <li>
+                    <span className="purple">▹</span> Quality Engineering Leadership
+                  </li>
+                </ul>
+              </div>
+
+              <div className="technical-skills">
+                <h3 className="section-subtitle">Technical Proficiency</h3>
+                <p>
+                  I architect and implement test automation frameworks using:
+                  <br />
+                  <span className="tech-stack">
+                    <span className="purple">Python</span> • 
+                    <span className="purple">Java</span> • 
+                    <span className="purple">JavaScript</span>
+                  </span>
+                </p>
+                <p>
+                  Leveraging modern tools:
+                  <br />
+                  <span className="tech-stack">
+                    <span className="purple">Playwright</span> • 
+                    <span className="purple">Cypress</span> • 
+                    <span className="purple">Selenium</span> • 
+                    <span className="purple">Robot Framework</span>
+                  </span>
+                </p>
+              </div>
+
+              <div className="passion-section">
+                <h3 className="section-subtitle">Professional Focus</h3>
+                <p>
+                  My passion centers on:
+                  <ul className="focus-list">
+                    <li>
+                      <span className="purple">▹</span> Building robust testing strategies
+                    </li>
+                    <li>
+                      <span className="purple">▹</span> Implementing shift-left testing culture
+                    </li>
+                    <li>
+                      <span className="purple">▹</span> Comprehensive quality assurance across Web, Mobile, and API platforms
+                    </li>
+                  </ul>
+                </p>
+              </div>
+
+              <div className="connect-section">
+                <p>
+                  <i>
+                    <span className="purple">Interested in collaboration? </span>
+                    <a 
+                      href="https://www.linkedin.com/in/sparimi/"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="connect-link"
+                    >
+                      Let's connect on LinkedIn
+                    </a>
+                  </i>
+                </p>
+                <p>
+                  <i>
+                    <span className="purple">Let's talk: </span>
+                    <a 
+                      href="/booking"
+                      className="connect-link schedule-link"
+                    >
+                      Find my schedule here
+                    </a>
+                  </i>
+                </p>
+              </div>
+            </div>
           </Col>
           <Col md={4} className="myAvtar">
-            <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
-            </Tilt>
+            <div className="avatar-hover">
+              <img 
+                src={myImg} 
+                className="img-fluid" 
+                alt="avatar" 
+                style={{
+                  transform: "scale(1)",
+                  transition: "transform 0.3s ease-in-out"
+                }}
+              />
+            </div>
           </Col>
         </Row>
         <Row>
@@ -89,16 +141,6 @@ function Home2() {
               </li>
               <li className="social-icons">
                 <a
-                  href="https://twitter.com/amsterdamps"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
                   href="https://www.linkedin.com/in/sparimi/"
                   target="_blank"
                   rel="noreferrer"
@@ -114,4 +156,5 @@ function Home2() {
     </Container>
   );
 }
+
 export default Home2;

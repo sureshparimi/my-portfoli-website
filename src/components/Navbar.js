@@ -13,7 +13,6 @@ import {
   AiOutlineMail
 } from "react-icons/ai";
 import { CgFileDocument, CgNotes } from "react-icons/cg";
-import { FaLinkedinIn } from "react-icons/fa";
 import { BsCalendarCheck } from "react-icons/bs";
 
 function NavBar() {
