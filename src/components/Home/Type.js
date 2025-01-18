@@ -6,10 +6,16 @@ function Type() {
     <Typewriter
       options={{
         strings: [
-          "Automation Test Consultant",
-          "Software Test Consultant/Lead/Test Co-ordinator",
-          "Expertise in Testing Web, Mobile and REST Services",
-          "Digital Nomad in Europe",
+          "Senior Test Automation Architect",
+          "QA/Test Management Lead",
+          "Release Management Consultant",
+          "DevOps & CI/CD Testing Expert",
+          "Test Strategy Consultant",
+          "Based in Amsterdam, Netherlands",
+          "17+ Years in Software Quality Assurance",
+          "Agile Testing & Leadership",
+          "Cloud Testing Specialist (AWS/Azure)",
+          "Test Automation Framework Designer"
         ],
         autoStart: true,
         loop: true,

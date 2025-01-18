@@ -18,32 +18,49 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with Software Testing and I have at least learnt
-              something, I think… 🤷‍♂️
+              With over 17 years of experience in Software Testing and Quality Assurance, 
+              I've mastered the art of delivering quality software.
               <br />
-              <br />I am fluent in classics like
+              <br />
+              My expertise spans across
               <i>
-                <b className="purple"> Python, Javascript and Java. </b>
+                <b className="purple"> Test Automation, Release Management, and Quality Engineering Leadership. </b>
               </i>
               <br />
               <br />
-              My field of Interest's is helping clients in  &nbsp;
+              I specialize in building and optimizing test automation frameworks using &nbsp;
               <i>
-                <b className="purple">delivering quality software and digital products </b> and
-                also in areas related to{" "}
+                <b className="purple">Python, Java, and JavaScript </b> with tools like {" "}
                 <b className="purple">
-                  Automated Testing and Software Testing.
+                  Playwright, Cypress, Selenium, and Robot Framework.
                 </b>
               </i>
               <br />
               <br />
-              Whenever possible, I learn new test tools, test methodologies, testing frameworks
-              that helps me in <b className="purple">building automated tests </b>
+              My passion lies in implementing 
               <i>
+                <b className="purple"> robust testing strategies </b> and fostering a {" "}
                 <b className="purple">
-                  {" "}
-                  
+                  shift-left testing culture
                 </b>
+              </i>
+              <br />
+              <br />
+              I bring extensive experience in &nbsp;
+              <b className="purple">Web, Mobile, and API Testing</b>, ensuring comprehensive 
+              quality across all aspects of software delivery.
+              <br />
+              <br />
+              <i>
+                <b className="purple">Want to know more about my professional journey? </b>
+                <a 
+                  href="https://www.linkedin.com/in/sparimi/"
+                  target="_blank"
+                  rel="noreferrer"
+                  style={{ color: "#c770f0", textDecoration: "none" }}
+                >
+                  Click here to connect on LinkedIn
+                </a>
               </i>
             </p>
           </Col>

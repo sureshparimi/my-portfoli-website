@@ -4,6 +4,8 @@ import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import Activities from "./Activities";
+import QuoteSection from "./QuoteSection";
 
 function Home() {
   return (
@@ -14,15 +16,17 @@ function Home() {
           <Row>
             <Col md={7} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
-                Hi There!{" "}
+                Hey There{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
-                  👋🏻
+                  👋
                 </span>
               </h1>
-
               <h1 className="heading-name">
-                I'M
-                <strong className="main-name"> Suresh Parimi</strong>
+                I'm <strong className="main-name">Suresh Parimi</strong>
+                <br />
+                <span className="location">
+                  from Amsterdam, The Netherlands
+                </span>
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" }}>
@@ -41,6 +45,8 @@ function Home() {
           </Row>
         </Container>
       </Container>
+      <Activities />
+      <QuoteSection />
       <Home2 />
     </section>
   );
