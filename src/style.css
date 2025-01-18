@@ -116,7 +116,6 @@ button:focus {
 .navbar-toggler span:nth-child(1),
 .navbar-toggler span:nth-child(3) {
   transition: transform 0.35s ease-in-out !important;
-  transition: transform 0.35s ease-in-out !important;
 }
 
 .navbar-toggler:not(.collapsed) span:nth-child(1) {
@@ -211,7 +210,7 @@ button:focus {
 /* --------- */
 /* Home section */
 /* --------- */
-.wave {
+.wave, .wave-hand {
   animation-name: wave-animation;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
@@ -626,9 +625,24 @@ button:focus {
 }
 
 .resume {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  justify-content: center;
+  position: relative;
+  z-index: 0;
+  margin: 20px 0;
+  padding: 0 15px;
+}
+
+.resume iframe {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.resume-controls {
+  position: relative;
+  z-index: 2;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 600px;
 }
 
 .resume-left {
@@ -824,21 +838,6 @@ button:focus {
   }
 }
 
-.resume-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px auto;
-  width: 100%;
-  max-width: 600px;
-  padding: 10px;
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 100;
-}
-
 .navigation-controls {
   display: flex;
   align-items: center;
@@ -885,7 +884,6 @@ button:focus {
 @media (max-width: 768px) {
   .resume-controls {
     max-width: 90%;
-    bottom: 10px;
   }
   
   .navigation-controls {
@@ -973,7 +971,7 @@ button:focus {
   gap: 30px;
   margin: 2rem 0;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.02);
   border-radius: 15px;
   backdrop-filter: blur(5px);
 }
@@ -982,20 +980,21 @@ button:focus {
   height: 60px;
   object-fit: contain;
   transition: all 0.3s ease-in-out;
-  padding: 5px;
-  background: rgba(255, 255, 255, 0.1);
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.03);
   border-radius: 8px;
 }
 
 .company-logo:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(147, 76, 206, 0.3);
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 @media (max-width: 768px) {
   .company-logo {
     height: 45px;
+    padding: 6px;
   }
   
   .company-logos {
@@ -1459,5 +1458,158 @@ button:focus {
   .about-activity,
   .project-description {
     font-size: 1em;
+  }
+}
+
+/* Add these styles to your existing resume controls styles */
+
+.page-navigation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 15px;
+  border-radius: 25px;
+}
+
+.page-input {
+  width: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  font-size: 1em;
+}
+
+.page-input:focus {
+  outline: none;
+  border-color: var(--imp-text-color);
+  box-shadow: 0 0 0 2px rgba(199, 112, 240, 0.2);
+}
+
+.page-separator {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+
+.total-pages {
+  color: white;
+  font-weight: 500;
+}
+
+/* Update existing media query */
+@media (max-width: 768px) {
+  .page-navigation {
+    padding: 6px 10px;
+  }
+  
+  .page-input {
+    width: 40px;
+    font-size: 0.9em;
+  }
+}
+
+/* Make sure the controls are above the PDF viewer */
+.resume {
+  position: relative;
+  z-index: 0;
+  margin: 20px 0;
+  padding: 0 15px;
+}
+
+.resume iframe {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure controls stay on top */
+.resume-controls {
+  position: relative;
+  z-index: 2;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Add these styles for the company experience section */
+.company-experience-section {
+  position: relative;
+  padding: 4rem 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(12, 8, 24, 0.9),
+    rgba(20, 15, 35, 0.95)
+  );
+  border-top: 1px solid rgba(199, 112, 240, 0.1);
+  border-bottom: 1px solid rgba(199, 112, 240, 0.1);
+}
+
+.company-content {
+  color: whitesmoke;
+}
+
+.company-description {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.company-description p {
+  text-align: justify;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.company-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 2rem 0;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+.company-logo {
+  height: 60px;
+  object-fit: contain;
+  transition: all 0.3s ease-in-out;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+}
+
+.company-logo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(147, 76, 206, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 768px) {
+  .company-logo {
+    height: 45px;
+    padding: 6px;
+  }
+  
+  .company-logos {
+    gap: 20px;
+    padding: 1rem;
+  }
+  
+  .company-description {
+    padding: 1.5rem;
+  }
+  
+  .company-description p {
+    font-size: 1rem;
   }
 }
