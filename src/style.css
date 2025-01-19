@@ -1810,3 +1810,63 @@ button:focus {
 .connect-section p:first-child {
   margin-bottom: 0.5rem;
 }
+
+/* YouTube video container styles */
+.video-container {
+  position: relative;
+  width: 100%;
+  margin: 2rem auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.video-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(199, 112, 240, 0.2);
+}
+
+.youtube-video {
+  display: block;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .video-container {
+    margin: 1.5rem auto;
+  }
+  
+  .youtube-video {
+    height: 300px;
+  }
+}
+
+.domain-expertise {
+  margin: 2rem 0;
+}
+
+.domain-expertise .expertise-list li {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.domain-expertise .purple {
+  font-weight: 600;
+}
+
+/* Update existing expertise-list styles */
+.expertise-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin: 0.8rem 0;
+}
+
+.expertise-list li span.purple {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}

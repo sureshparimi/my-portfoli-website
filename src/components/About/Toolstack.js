@@ -13,36 +13,24 @@ function Toolstack() {
         </thead>
         <tbody>
           <tr>
-            <td>Programming Languages</td>
-            <td>Java • Python • JavaScript</td>
-          </tr>
-          <tr>
-            <td>Web UI Automation</td>
-            <td>Playwright • Cypress • Selenium</td>
-          </tr>
-          <tr>
-            <td>Mobile Testing</td>
-            <td>Appium • Detox</td>
-          </tr>
-          <tr>
-            <td>API Testing</td>
-            <td>RestAssured • Postman • Pytest</td>
-          </tr>
-          <tr>
             <td>CI/CD & DevOps</td>
-            <td>Jenkins • GitHub Actions • Azure DevOps • Docker</td>
-          </tr>
-          <tr>
-            <td>Cloud Platforms</td>
-            <td>AWS • Azure</td>
-          </tr>
-          <tr>
-            <td>Reporting & Analytics</td>
-            <td>Allure • Extent Reports • Grafana • ELK Stack • Report Portal</td>
+            <td>Azure DevOps • GitHub Actions • Jenkins • Docker</td>
           </tr>
           <tr>
             <td>Test Management</td>
-            <td>JIRA • Zephyr • X-Ray • PowerBI • Streamlit</td>
+            <td>JIRA • TestRail • ALM • Zephyr</td>
+          </tr>
+          <tr>
+            <td>Automation Frameworks</td>
+            <td>Selenium • Cypress • Playwright • RestAssured • Appium</td>
+          </tr>
+          <tr>
+            <td>Programming</td>
+            <td>Python • JavaScript • Java</td>
+          </tr>
+          <tr>
+            <td>Performance Testing</td>
+            <td>JMeter • LoadRunner</td>
           </tr>
         </tbody>
       </Table>

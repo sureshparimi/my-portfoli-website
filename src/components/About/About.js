@@ -43,6 +43,24 @@ function About() {
         </h1>
         <Techstack />
 
+        <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
+          <Col xs={4} md={2} className="tech-icons">
+            <span>Selenium</span>
+          </Col>
+          <Col xs={4} md={2} className="tech-icons">
+            <span>Cypress</span>
+          </Col>
+          <Col xs={4} md={2} className="tech-icons">
+            <span>Playwright</span>
+          </Col>
+          <Col xs={4} md={2} className="tech-icons">
+            <span>RestAssured</span>
+          </Col>
+          <Col xs={4} md={2} className="tech-icons">
+            <span>Appium</span>
+          </Col>
+        </Row>
+
         <Github />
       </Container>
     </Container>

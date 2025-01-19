@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import homeLogo from "../../Assets/home-main.svg";
 import Particle from "../Particle";
@@ -17,6 +17,65 @@ import europolLogo from "../../Assets/company/Europol.png";
 import infosysLogo from "../../Assets/company/Infosys.png";
 
 function Home() {
+  useEffect(() => {
+    let player;
+    
+    // Define YT player initialization function
+    function initPlayer() {
+      // @ts-ignore
+      if (window.YT && window.YT.Player) {
+        player = new window.YT.Player('promo-video', {
+          events: {
+            'onStateChange': (event) => {
+              // Use strict equality
+              if (event.data === window.YT.PlayerState.ENDED) {
+                player.seekTo(0);
+              }
+            }
+          }
+        });
+      }
+    }
+
+    // Load YouTube API
+    if (!window.YT) {
+      const tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      const firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // Set up the callback for when API is ready
+      window.onYouTubeIframeAPIReady = initPlayer;
+    } else {
+      initPlayer();
+    }
+
+    // Add intersection observer for autoplay
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && player && player.playVideo) {
+          player.playVideo();
+        } else if (player && player.pauseVideo) {
+          player.pauseVideo();
+        }
+      });
+    }, { threshold: 0.5 });
+
+    const videoElement = document.getElementById('promo-video');
+    if (videoElement) {
+      observer.observe(videoElement);
+    }
+
+    // Cleanup
+    return () => {
+      if (videoElement) {
+        observer.unobserve(videoElement);
+      }
+      // Clean up YouTube API callback
+      window.onYouTubeIframeAPIReady = null;
+    };
+  }, []);
+
   return (
     <section>
       <Container fluid className="home-section" id="home">
@@ -61,10 +120,25 @@ function Home() {
           <Row>
             <Col md={12} className="company-content">
               <div className="company-description">
+                <div className="video-container">
+                  <iframe
+                    width="100%"
+                    height="500"
+                    src="https://www.youtube.com/embed/tzH3EVdlkUQ?si=Lf1wNb3l0bMaU2ZL&enablejsapi=1"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    className="youtube-video"
+                    id="promo-video"
+                  />
+                </div>
                 <p>
-                  Some of my well-known enterprise customers include Canon-Europe, Dolby.io, 
-                  Pfizer, Gordon Food Services, T-Mobile, Europol, and Infosys. I have also worked with 
-                  fast-paced startups in the healthcare and fintech domains.
+                  My diverse experience across both enterprise and startup environments has equipped me 
+                  with unique insights and adaptable strategies. This versatility allows me to deliver 
+                  tailored testing solutions that drive quality and efficiency, regardless of the 
+                  organization's size or industry.
                 </p>
                 <div className="company-logos">
                   <Image src={canonLogo} alt="Canon Europe" className="company-logo" />
@@ -75,12 +149,6 @@ function Home() {
                   <Image src={europolLogo} alt="Europol" className="company-logo" />
                   <Image src={infosysLogo} alt="Infosys" className="company-logo" />
                 </div>
-                <p>
-                  My diverse experience across both enterprise and startup environments has equipped me 
-                  with unique insights and adaptable strategies. This versatility allows me to deliver 
-                  tailored testing solutions that drive quality and efficiency, regardless of the 
-                  organization's size or industry.
-                </p>
               </div>
             </Col>
           </Row>

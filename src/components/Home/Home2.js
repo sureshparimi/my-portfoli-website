@@ -18,23 +18,65 @@ function Home2() {
             <div className="home-about-body">
               <div className="experience-highlight">
                 <p>
-                  With over <span className="purple">17 years</span> of experience in 
-                  Software Testing and Quality Assurance, I've cultivated expertise in 
-                  delivering exceptional software quality.
+                  With over <span className="purple">17 years</span> of experience in Software Testing and Quality Assurance, 
+                  I've delivered excellence across diverse domains including 
+                  <span className="purple"> Banking & SEPA Payments</span>, 
+                  <span className="purple"> Healthcare</span>, 
+                  <span className="purple"> Telecom</span>, and 
+                  <span className="purple"> Manufacturing</span>.
                 </p>
+              </div>
+
+              <div className="domain-expertise">
+                <h3 className="section-subtitle">Domain Experience</h3>
+                <ul className="expertise-list">
+                  <li>
+                    <span className="purple">▹</span> Banking & Fintech: SEPA Payments (SCT, SDD, SCT Inst), Credit Cards, Payment Gateways
+                  </li>
+                  <li>
+                    <span className="purple">▹</span> Healthcare: Patient Management, Clinical Systems, Healthcare Platforms
+                  </li>
+                  <li>
+                    <span className="purple">▹</span> Telecom: Billing Systems, OSS/BSS, Mobile Applications
+                  </li>
+                  <li>
+                    <span className="purple">▹</span> Enterprise CRM: Salesforce, Siebel CRM, Oracle Apps Integration
+                  </li>
+                  <li>
+                    <span className="purple">▹</span> Manufacturing: Supply Chain, Order Management, CPQ Systems
+                  </li>
+                </ul>
               </div>
 
               <div className="expertise-section">
                 <h3 className="section-subtitle">Core Expertise</h3>
                 <ul className="expertise-list">
                   <li>
-                    <span className="purple">▹</span> Test Automation Architecture
+                    <span className="purple">▹</span> Test Automation Architecture & Framework Development
                   </li>
                   <li>
-                    <span className="purple">▹</span> Release Management
+                    <span className="purple">▹</span> CI/CD Pipeline Integration & DevOps Practices
                   </li>
                   <li>
-                    <span className="purple">▹</span> Quality Engineering Leadership
+                    <span className="purple">▹</span> Performance Testing & Optimization
+                  </li>
+                  <li>
+                    <span className="purple">▹</span> Agile Testing Leadership & Process Improvement
+                  </li>
+                </ul>
+              </div>
+
+              <div className="key-achievements">
+                <h3 className="section-subtitle">Recent Achievements</h3>
+                <ul className="achievement-list">
+                  <li>
+                    <span className="purple">▹</span> Led ALM decommissioning at Canon Europe, saving €60,000 within 3 months
+                  </li>
+                  <li>
+                    <span className="purple">▹</span> Automated compliance checks saving 30 hours daily for 10 team members
+                  </li>
+                  <li>
+                    <span className="purple">▹</span> Modernized test automation infrastructure, saving €75,000 annually
                   </li>
                 </ul>
               </div>
