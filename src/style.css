@@ -210,12 +210,19 @@ button:focus {
 /* --------- */
 /* Home section */
 /* --------- */
-.wave, .wave-hand {
+.wave {
   animation-name: wave-animation;
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
   transform-origin: 70% 70%;
   display: inline-block;
+  font-size: 1.3em;
+  background: linear-gradient(120deg, #c770f0, #be50f4, #934cce);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: brightness(1.2) saturate(1.5);
+  text-shadow: 0 0 10px rgba(199, 112, 240, 0.3);
 }
 
 @keyframes wave-animation {
@@ -228,6 +235,7 @@ button:focus {
   60% { transform: rotate(0.0deg) }
   100% { transform: rotate(0.0deg) }
 }
+
 #tsparticles {
   position: fixed !important;
   background-repeat: no-repeat !important;
@@ -270,6 +278,7 @@ button:focus {
 .heading-name {
   font-size: 2.5em !important;
   padding-left: 45px !important;
+  margin-bottom: 20px !important;
 }
 
 .main-name {
@@ -1018,12 +1027,6 @@ button:focus {
   box-shadow: 0 4px 8px rgba(147, 76, 206, 0.2);
 }
 
-.location {
-  font-size: 1.2em;
-  color: var(--imp-text-color);
-  font-weight: 400;
-}
-
 .activities-section {
   padding: 70px 0;
   background: rgba(255, 255, 255, 0.05);
@@ -1670,8 +1673,8 @@ button:focus {
 }
 
 .experience-highlight {
+  margin: 1.5rem 0;
   font-size: 1.2em;
-  margin-bottom: 2rem;
   line-height: 1.8;
   border-left: 3px solid var(--imp-text-color);
   padding-left: 20px;
@@ -1682,6 +1685,7 @@ button:focus {
   color: var(--imp-text-color);
   margin: 1.5rem 0 1rem;
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .expertise-list, .focus-list {
@@ -1713,7 +1717,7 @@ button:focus {
 }
 
 .connect-section {
-  margin-top: 2.5rem;
+  margin: 1.5rem 0;
   padding: 1.5rem;
   background: rgba(199, 112, 240, 0.05);
   border: 2px solid var(--imp-text-color);
@@ -1845,11 +1849,11 @@ button:focus {
 }
 
 .domain-expertise {
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 
 .domain-expertise .expertise-list li {
-  margin: 1rem 0;
+  margin: 0.8rem 0;
   line-height: 1.6;
 }
 
@@ -1869,4 +1873,348 @@ button:focus {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+
+/* Core Values Section Styles */
+.core-values-section {
+  padding: 20px 50px;
+  margin-top: 10px;
+}
+
+.core-values-title {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: white;
+  position: relative;
+  display: inline-block;
+}
+
+.core-values-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--imp-text-color), transparent);
+}
+
+.core-values-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.core-value-item {
+  padding: 8px 16px;
+  background: rgba(199, 112, 240, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(199, 112, 240, 0.3);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.5s ease forwards;
+  opacity: 0;
+}
+
+.core-value-item:nth-child(1) { animation-delay: 0.1s; }
+.core-value-item:nth-child(2) { animation-delay: 0.2s; }
+.core-value-item:nth-child(3) { animation-delay: 0.3s; }
+.core-value-item:nth-child(4) { animation-delay: 0.4s; }
+.core-value-item:nth-child(5) { animation-delay: 0.5s; }
+
+.core-value-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(199, 112, 240, 0.2);
+  background: rgba(199, 112, 240, 0.15);
+}
+
+.core-value-item span {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .core-values-section {
+    padding: 20px 20px;
+  }
+  
+  .core-values-container {
+    gap: 10px;
+  }
+  
+  .core-value-item {
+    padding: 6px 12px;
+  }
+  
+  .core-value-item span {
+    font-size: 1em;
+  }
+}
+
+/* Fading Text Styles */
+.fading-text-container {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 45px;
+}
+
+.fading-text {
+  font-size: 2.2em;
+  color: var(--imp-text-color);
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fading-text.fade-in {
+  opacity: 1;
+}
+
+.fading-text.fade-out {
+  opacity: 0;
+}
+
+@media (max-width: 767px) {
+  .fading-text {
+    font-size: 1.8em;
+  }
+  
+  .fading-text-container {
+    min-height: 50px;
+    padding-left: 20px;
+  }
+}
+
+/* Enhanced Introduction Styles */
+.tech-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.tech-category {
+  background: rgba(199, 112, 240, 0.05);
+  padding: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(199, 112, 240, 0.1);
+}
+
+.tech-category-title {
+  font-size: 1.1em;
+  color: var(--imp-text-color);
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+.achievement-list li {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.achievement-list li strong {
+  color: var(--imp-text-color);
+  font-weight: 600;
+}
+
+.experience-highlight p {
+  font-size: 1.3em;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+.domain-expertise .expertise-list li {
+  padding: 0.8rem 1.2rem;
+  background: rgba(199, 112, 240, 0.03);
+  border-radius: 8px;
+  margin: 0.8rem 0;
+  transition: all 0.3s ease;
+}
+
+.domain-expertise .expertise-list li:hover {
+  background: rgba(199, 112, 240, 0.07);
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .tech-categories {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .experience-highlight p {
+    font-size: 1.1em;
+  }
+  
+  .domain-expertise .expertise-list li {
+    padding: 0.6rem 1rem;
+  }
+}
+
+.skills-section {
+  margin: 1.5rem 0;
+}
+
+.skills-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 8px 0;
+}
+
+.skills-link .arrow {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.skills-link:hover {
+  text-decoration: none;
+}
+
+.skills-link:hover .arrow {
+  transform: translateX(5px);
+}
+
+.skills-link-box {
+  display: block;
+  background: rgba(199, 112, 240, 0.05);
+  border: 2px solid var(--imp-text-color);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  margin: 0.8rem 0;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-link-box:hover {
+  transform: translateY(-3px);
+  background: rgba(199, 112, 240, 0.1);
+  border-width: 2px;
+  box-shadow: 0 5px 15px rgba(199, 112, 240, 0.3);
+  text-decoration: none;
+}
+
+.skills-link-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 0.2rem 0;
+}
+
+.skills-arrow {
+  color: var(--imp-text-color);
+  font-size: 1.4em;
+  transition: transform 0.3s ease;
+  margin-left: 1rem;
+}
+
+.skills-link-box:hover .skills-arrow {
+  transform: translateX(8px);
+}
+
+.skills-hint {
+  font-size: 0.9em;
+  color: white;
+  margin-top: 0.8rem;
+  opacity: 0.9;
+  border-top: 1px solid rgba(199, 112, 240, 0.2);
+  padding-top: 0.8rem;
+  font-weight: 600;
+}
+
+.skills-link-box:hover .skills-hint {
+  color: white;
+  opacity: 1;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .skills-link-box {
+    padding: 1rem;
+  }
+  
+  .skills-link-content {
+    font-size: 1.1em;
+  }
+}
+
+/* Update section spacing */
+.experience-highlight {
+  margin: 1.5rem 0;
+}
+
+.domain-expertise {
+  margin: 1.5rem 0;
+}
+
+.achievements-section {
+  margin: 1.5rem 0;
+}
+
+.skills-section {
+  margin: 1.5rem 0;
+}
+
+.focus-section {
+  margin: 1.5rem 0;
+}
+
+.connect-section {
+  margin: 1.5rem 0;
+}
+
+/* Adjust internal spacing */
+.section-subtitle {
+  margin-bottom: 1rem;
+}
+
+.expertise-list li,
+.achievement-list li,
+.focus-list li {
+  margin: 0.8rem 0;
+}
+
+.domain-expertise .expertise-list li {
+  margin: 0.8rem 0;
+  padding: 0.8rem 1.2rem;
+}
+
+.skills-link-box {
+  margin: 0.8rem 0;
+}
+
+/* Adjust mobile spacing */
+@media (max-width: 768px) {
+  .experience-highlight,
+  .domain-expertise,
+  .achievements-section,
+  .skills-section,
+  .focus-section,
+  .connect-section {
+    margin: 1.2rem 0;
+  }
+  
+  .section-subtitle {
+    margin-bottom: 0.8rem;
+  }
 }

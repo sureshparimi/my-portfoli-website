@@ -6,6 +6,7 @@ import Home2 from "./Home2";
 import Type from "./Type";
 import Activities from "./Activities";
 import QuoteSection from "./QuoteSection";
+import FadingText from "./FadingText";
 
 // Import company logos
 import canonLogo from "../../Assets/company/Canon.png";
@@ -91,14 +92,31 @@ function Home() {
               </h1>
               <h1 className="heading-name">
                 I'm <strong className="main-name">Suresh Parimi</strong>
-                <br />
-                <span className="location">
-                  from Amsterdam, The Netherlands
-                </span>
               </h1>
 
-              <div style={{ padding: 50, textAlign: "left" }}>
-                <Type />
+              <div style={{ padding: "20px 0" }}>
+                <FadingText />
+              </div>
+
+              <div className="core-values-section">
+                <h2 className="core-values-title">Core Values</h2>
+                <div className="core-values-container">
+                  <div className="core-value-item">
+                    <span className="purple">Can do</span>
+                  </div>
+                  <div className="core-value-item">
+                    <span className="purple">Together</span>
+                  </div>
+                  <div className="core-value-item">
+                    <span className="purple">Curiosity</span>
+                  </div>
+                  <div className="core-value-item">
+                    <span className="purple">Integrity</span>
+                  </div>
+                  <div className="core-value-item">
+                    <span className="purple">Joy</span>
+                  </div>
+                </div>
               </div>
             </Col>
 

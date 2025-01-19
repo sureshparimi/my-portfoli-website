@@ -16,112 +16,92 @@ function Home2() {
               Let Me <span className="purple">Introduce</span> Myself
             </h1>
             <div className="home-about-body">
+              {/* Professional Summary */}
               <div className="experience-highlight">
                 <p>
-                  With over <span className="purple">17 years</span> of experience in Software Testing and Quality Assurance, 
-                  I've delivered excellence across diverse domains including 
-                  <span className="purple"> Banking & SEPA Payments</span>, 
-                  <span className="purple"> Healthcare</span>, 
-                  <span className="purple"> Telecom</span>, and 
-                  <span className="purple"> Manufacturing</span>.
+                  A seasoned <span className="purple">Software Engineering Lead</span> with over 
+                  <span className="purple"> 17 years</span> of experience in Quality Engineering 
+                  and Test Automation. I specialize in building robust testing frameworks and 
+                  leading high-performing engineering teams across diverse domains.
                 </p>
               </div>
 
+              {/* Domain Expertise */}
               <div className="domain-expertise">
-                <h3 className="section-subtitle">Domain Experience</h3>
+                <h3 className="section-subtitle">Industry Experience</h3>
                 <ul className="expertise-list">
                   <li>
-                    <span className="purple">▹</span> Banking & Fintech: SEPA Payments (SCT, SDD, SCT Inst), Credit Cards, Payment Gateways
+                    <span className="purple">▹</span> 
+                    <strong>Banking & Fintech:</strong> Led SEPA payments testing (SCT, SDD, SCT Inst) at ABN AMRO, 
+                    ensuring compliance and integration quality
                   </li>
                   <li>
-                    <span className="purple">▹</span> Healthcare: Patient Management, Clinical Systems, Healthcare Platforms
+                    <span className="purple">▹</span> 
+                    <strong>Enterprise Solutions:</strong> Managed CRM and Finance testing at Canon Europe, 
+                    focusing on Salesforce, Oracle, and CPQ systems
                   </li>
                   <li>
-                    <span className="purple">▹</span> Telecom: Billing Systems, OSS/BSS, Mobile Applications
+                    <span className="purple">▹</span> 
+                    <strong>Healthcare & Pharma:</strong> Delivered test automation solutions for Pfizer's 
+                    clinical and patient management systems
                   </li>
                   <li>
-                    <span className="purple">▹</span> Enterprise CRM: Salesforce, Siebel CRM, Oracle Apps Integration
-                  </li>
-                  <li>
-                    <span className="purple">▹</span> Manufacturing: Supply Chain, Order Management, CPQ Systems
+                    <span className="purple">▹</span> 
+                    <strong>Telecom & Infrastructure:</strong> Implemented quality frameworks for T-Mobile's 
+                    billing and OSS/BSS systems
                   </li>
                 </ul>
               </div>
 
-              <div className="expertise-section">
-                <h3 className="section-subtitle">Core Expertise</h3>
-                <ul className="expertise-list">
-                  <li>
-                    <span className="purple">▹</span> Test Automation Architecture & Framework Development
-                  </li>
-                  <li>
-                    <span className="purple">▹</span> CI/CD Pipeline Integration & DevOps Practices
-                  </li>
-                  <li>
-                    <span className="purple">▹</span> Performance Testing & Optimization
-                  </li>
-                  <li>
-                    <span className="purple">▹</span> Agile Testing Leadership & Process Improvement
-                  </li>
-                </ul>
-              </div>
-
-              <div className="key-achievements">
-                <h3 className="section-subtitle">Recent Achievements</h3>
+              {/* Key Achievements */}
+              <div className="achievements-section">
+                <h3 className="section-subtitle">Recent Impact</h3>
                 <ul className="achievement-list">
                   <li>
-                    <span className="purple">▹</span> Led ALM decommissioning at Canon Europe, saving €60,000 within 3 months
+                    <span className="purple">▹</span> 
+                    Modernized test automation infrastructure, resulting in <strong>€75,000 annual savings</strong>
                   </li>
                   <li>
-                    <span className="purple">▹</span> Automated compliance checks saving 30 hours daily for 10 team members
+                    <span className="purple">▹</span> 
+                    Led ALM decommissioning project, saving <strong>€60,000 within 3 months</strong>
                   </li>
                   <li>
-                    <span className="purple">▹</span> Modernized test automation infrastructure, saving €75,000 annually
+                    <span className="purple">▹</span> 
+                    Automated compliance audit processes using <strong>JIRA REST API</strong>, <strong>Python</strong>, 
+                    and <strong>Streamlit</strong>
                   </li>
                 </ul>
               </div>
 
-              <div className="technical-skills">
-                <h3 className="section-subtitle">Technical Proficiency</h3>
-                <p>
-                  I architect and implement test automation frameworks using:
-                  <br />
-                  <span className="tech-stack">
-                    <span className="purple">Python</span> • 
-                    <span className="purple">Java</span> • 
-                    <span className="purple">JavaScript</span>
-                  </span>
-                </p>
-                <p>
-                  Leveraging modern tools:
-                  <br />
-                  <span className="tech-stack">
-                    <span className="purple">Playwright</span> • 
-                    <span className="purple">Cypress</span> • 
-                    <span className="purple">Selenium</span> • 
-                    <span className="purple">Robot Framework</span>
-                  </span>
-                </p>
+              {/* Skills Section */}
+              <div className="skills-section">
+                <h3 className="section-subtitle">Technical Skills</h3>
+                <a href="/about" className="skills-link-box">
+                  <div className="skills-link-content">
+                    <span className="purple">View technical skills</span>
+                    <span className="skills-arrow">→</span>
+                  </div>
+                  <div className="skills-hint">Click to explore my technical expertise</div>
+                </a>
               </div>
 
-              <div className="passion-section">
-                <h3 className="section-subtitle">Professional Focus</h3>
-                <p>
-                  My passion centers on:
-                  <ul className="focus-list">
-                    <li>
-                      <span className="purple">▹</span> Building robust testing strategies
-                    </li>
-                    <li>
-                      <span className="purple">▹</span> Implementing shift-left testing culture
-                    </li>
-                    <li>
-                      <span className="purple">▹</span> Comprehensive quality assurance across Web, Mobile, and API platforms
-                    </li>
-                  </ul>
-                </p>
+              {/* Professional Focus */}
+              <div className="focus-section">
+                <h3 className="section-subtitle">Current Focus</h3>
+                <ul className="focus-list">
+                  <li>
+                    <span className="purple">▹</span> Building scalable test automation architectures
+                  </li>
+                  <li>
+                    <span className="purple">▹</span> Implementing shift-left testing practices
+                  </li>
+                  <li>
+                    <span className="purple">▹</span> Mentoring and growing engineering teams
+                  </li>
+                </ul>
               </div>
 
+              {/* Connect Section */}
               <div className="connect-section">
                 <p>
                   <i>
