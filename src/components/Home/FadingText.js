@@ -5,11 +5,10 @@ function FadingText() {
   const [currentText, setCurrentText] = useState(0);
   
   const texts = [
-    "Software Engineering Lead",
+    "Quality & Ops Engineering Leader",
     "Test Automation Architect",
-    "SEPA Payments Expert",
-    "Quality Engineering Leader",
-    "DevOps & CI/CD Specialist"
+    "Azure DevOps Engineer",
+    "MLOps Learner"
   ];
 
   useEffect(() => {
